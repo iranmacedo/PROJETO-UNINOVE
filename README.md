@@ -729,9 +729,3 @@ Os contatos são armazenados em um arquivo binário `contacts.dat`. Ele contém 
 * Sincronização com APIs externas.
 
 ---
-
-* 📝 `LICENSE`
-* 📂 Estrutura completa de repositório
-* 💡 README mais detalhado com GIFs, badges, imagens etc.
-
-É só pedir! 😄

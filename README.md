@@ -1,4 +1,67 @@
-# PROJETO-UNINOVE
+# Agenda Inteligente de Contatos (C - Console)
+
+Este projeto implementa uma **Agenda Inteligente de Contatos** em linguagem C, executada via console. O sistema oferece funcionalidades de CRUD, persistência, importação/exportação CSV, recomendação e detecção de duplicados.
+
+---
+
+## 📌 Funcionalidades
+
+* ➕ **Adicionar contatos**
+* 📄 **Listar contatos (resumo)**
+* 🔍 **Visualizar contato por ID**
+* ✏️ **Atualizar contato**
+* ❌ **Remover contato (soft delete)**
+* 🔎 **Busca por nome / telefone / email**
+* 📤 **Exportar para CSV**
+* 📥 **Importar CSV**
+* 🌀 **Detecção de duplicados**
+* ⭐ **Recomendações (Top N por acessos)**
+* 📊 **Relatório Top N (acessos)**
+* 🧪 **Gerar contatos de exemplo**
+
+---
+
+## 🛠️ Compilação
+
+```bash
+gcc -o agenda agenda.c
+```
+
+## ▶️ Execução
+
+```bash
+./agenda
+```
+
+---
+
+## 📁 Estrutura do Arquivo Principal (`agenda.c`)
+
+A seguir está **todo o código-fonte completo**, pronto para publicação no GitHub:
+
+```c
+/* agenda.c
+ *
+ * Agenda Inteligente de Contatos - Versão em C (console)
+ * ... (todo o código fornecido pelo usuário) ...
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+#define DATA_FILE "contacts.dat"
+#define MAX_CONTACTS 10000
+#define NAME_LEN 100
+#define PHONE_LEN 40
+#define EMAIL_LEN 100
+#define COMPANY_LEN 80
+#define CATEGORY_LEN 40
+#define ADDRESS_LEN 200
+#define NOTES_LEN 300
+#define CSV_LINE 1024
+
 /* agenda.c
  *
  * Agenda Inteligente de Contatos - Versão em C (console)
@@ -638,3 +701,37 @@ int main() {
  * - adicionar criptografia dos dados,
  * - criar interface gráfica (GTK, Qt) ou versão web (com backend em C ou outro).
  */
+
+---
+
+## 📦 Persistência dos Dados
+
+Os contatos são armazenados em um arquivo binário `contacts.dat`. Ele contém até **MAX_CONTACTS registros fixos**, facilitando o carregamento.
+
+---
+
+## 📑 Observações Técnicas
+
+* Sistema usa **soft delete** (active=0) para remover contatos.
+* Exportação CSV converte vírgulas em `;`.
+* Importação CSV é simples e não suporta aspas.
+* Recomendações usam apenas contagem de acessos.
+* O arquivo binário sempre escreve o array completo.
+
+---
+
+## 🚀 Possíveis Extensões
+
+* Integração com SQLite.
+* Interface gráfica (GTK, Qt).
+* Versão web com backend em C.
+* Criptografia de dados.
+* Sincronização com APIs externas.
+
+---
+
+* 📝 `LICENSE`
+* 📂 Estrutura completa de repositório
+* 💡 README mais detalhado com GIFs, badges, imagens etc.
+
+É só pedir! 😄
